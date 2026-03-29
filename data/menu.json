@@ -1,0 +1,23 @@
+[
+  {
+    "category": "Entrantes",
+    "items": [
+      { "name": "Ensaladilla rusa", "price": "6€" },
+      { "name": "Croquetas caseras", "price": "8€" }
+    ]
+  },
+  {
+    "category": "Platos principales",
+    "items": [
+      { "name": "Paella de marisco", "price": "15€" },
+      { "name": "Lasaña vegetariana", "price": "12€" }
+    ]
+  },
+  {
+    "category": "Postres",
+    "items": [
+      { "name": "Flan casero", "price": "4€" },
+      { "name": "Helado variado", "price": "5€" }
+    ]
+  }
+]
