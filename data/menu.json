@@ -2,22 +2,88 @@
   {
     "category": "Entrantes",
     "items": [
-      { "name": "Ensaladilla rusa", "price": "6€" },
-      { "name": "Croquetas caseras", "price": "8€" }
+      { "name": "Ensalada Mixta", "description": "Lechuga, tomate, maíz, zanahoria y huevo duro", "priceP": "", "priceG": "8.00€" },
+      { "name": "Ensalada Cesar", "description": "Lechuga, pollo, picatostes, queso y salsa cesar", "priceP": "", "priceG": "10.00€" },
+      { "name": "Ensalada de la Casa", "description": "Lechuga, tomate, queso, frutos secos y cebolla crujiente", "priceP": "", "priceG": "10.00€" },
+      { "name": "Ensalada de la Mari", "description": "Lechuga, rúcula, canónigos, arándanos y miel", "priceP": "", "priceG": "10.00€" },
+      { "name": "Picadillo Tomate Cebolla", "description": "A elegir entre caballa o atún", "priceP": "4.00€", "priceG": "8.00€" },
+      { "name": "Tomate Aliñado con Ajo y Oregano", "description": "", "priceP": "4.00€", "priceG": "8.00€" },
+      { "name": "Pimientos Asados con Cebolla y Atun", "description": "", "priceP": "4.00€", "priceG": "8.00€" },
+      { "name": "Ensaladilla Rusa", "description": "", "priceP": "3.50€", "priceG": "7.00€" },
+      { "name": "Papas Saladas", "description": "A elegir entre roquefort, alioli o brava", "priceP": "4.00€", "priceG": "8.00€" },
+      { "name": "Papas de la Casa", "description": "Patatas, gambas y salsa de la casa", "priceP": "4.50€", "priceG": "9.00€" }
     ]
   },
   {
-    "category": "Platos principales",
+    "category": "Del Mar",
     "items": [
-      { "name": "Paella de marisco", "price": "15€" },
-      { "name": "Lasaña vegetariana", "price": "12€" }
+      { "name": "Chipirones Plancha", "description": "", "priceP": "4.50€", "priceG": "12.00€" },
+      { "name": "Sepia Plancha", "description": "", "priceP": "", "priceG": "12.00€" },
+      { "name": "Gallo de San Pedro Plancha", "description": "", "priceP": "", "priceG": "15.00€" },
+      { "name": "Dorada Plancha", "description": "", "priceP": "6.00€", "priceG": "12.00€" },
+      { "name": "Chocos Fritos", "description": "", "priceP": "", "priceG": "12.00€" },
+      { "name": "Cazon en Adobo Frito", "description": "", "priceP": "4.50€", "priceG": "12.00€" },
+      { "name": "Boquerones Fritos", "description": "", "priceP": "", "priceG": "11.00€" },
+      { "name": "Puntillitas", "description": "", "priceP": "4.50€", "priceG": "9.00€" },
+      { "name": "Pavia de Merluza", "description": "", "priceP": "4.50€", "priceG": "9.00€" },
+      { "name": "Pescado Frito Variado", "description": "Chocos, cazón y boquerones (p/p)", "priceP": "", "priceG": "15.00€" }
     ]
   },
   {
-    "category": "Postres",
+    "category": "Platos y Raciones",
     "items": [
-      { "name": "Flan casero", "price": "4€" },
-      { "name": "Helado variado", "price": "5€" }
+      { "name": "Filetitos de Presa Iberica", "description": "", "priceP": "", "priceG": "16.00€" },
+      { "name": "Lagarto Iberico", "description": "", "priceP": "7.50€", "priceG": "15.00€" },
+      { "name": "Chuletitas de Cordero", "description": "", "priceP": "", "priceG": "19.50€" },
+      { "name": "Churrasco de Pollo o Cerdo", "description": "", "priceP": "", "priceG": "10.00€" },
+      { "name": "Carrillada en Salsa", "description": "", "priceP": "4.50€", "priceG": "9.00€" },
+      { "name": "Rabo de Toro", "description": "", "priceP": "", "priceG": "14.00€" },
+      { "name": "Albóndigas en Salsa", "description": "", "priceP": "4.50€", "priceG": "9.00€" },
+      { "name": "Revuelto Campero", "description": "", "priceP": "", "priceG": "10.00€" },
+      { "name": "Platos Combinados", "description": "", "priceP": "", "priceG": "9.00€" },
+      { "name": "Huevos con Patatas", "description": "", "priceP": "", "priceG": "7.00€" },
+      { "name": "Super Combinado XXL", "description": "Cerdo, patatas, bacon, huevo, pimiento y chorizo", "priceP": "", "priceG": "12.00€" },
+      { "name": "Solomillo", "description": "Salsa a elegir roquefort, pimienta o de la casa", "priceP": "4.50€", "priceG": "9.00€" },
+      { "name": "Huevos Glaseados", "description": "", "priceP": "4.00€", "priceG": "8.00€" },
+      { "name": "Flamenquines Caseros", "description": "Jamón york y queso", "priceP": "4.50€", "priceG": "9.00€" },
+      { "name": "Lengua en Salsa", "description": "", "priceP": "4.50€", "priceG": "9.00€" }
+    ]
+  },
+  {
+    "category": "Baguettes",
+    "items": [
+      { "name": "Faberman", "description": "Pollo, tomate, jamón y alioli", "priceP": "4.00€", "priceG": "5.00€" },
+      { "name": "Toreto", "description": "Pollo, jamón, salsa roquefort", "priceP": "4.00€", "priceG": "5.00€" },
+      { "name": "Baghetto", "description": "Pollo, jamón, salsa roquefort, lechuga", "priceP": "4.00€", "priceG": "6.00€" },
+      { "name": "Campera", "description": "Carne mechada, jamón y tomate", "priceP": "4.00€", "priceG": "6.00€" },
+      { "name": "Sabrosa", "description": "Panceta al horno y queso", "priceP": "4.00€", "priceG": "5.00€" },
+      { "name": "Gaditana", "description": "Palitos de cangrejo, salsa rosa, lechuga, pimiento piquillo, tomate y atún", "priceP": "4.00€", "priceG": "5.00€" },
+      { "name": "Empana", "description": "Filete de pollo empanado", "priceP": "4.00€", "priceG": "5.00€" },
+      { "name": "Pio-Pio", "description": "Pollo, tomate y jamón", "priceP": "4.00€", "priceG": "5.00€" }
+    ]
+  },
+  {
+    "category": "Sandwichs",
+    "items": [
+      { "name": "Mixto", "description": "York y queso", "priceP": "4.00€", "priceG": "" },
+      { "name": "Vegetal", "description": "Lechuga, cebolla, tomate y atún", "priceP": "4.50€", "priceG": "" },
+      { "name": "Club", "description": "Pollo, lechuga, huevo, bacon, york y queso", "priceP": "7.00€", "priceG": "" }
+    ]
+  },
+  {
+    "category": "Hamburguesas",
+    "items": [
+      { "name": "Completa", "description": "Hamburguesa, bacon, queso, huevo, tomate y cebolla", "priceP": "6.00€", "priceG": "" },
+      { "name": "Crunchy", "description": "Hamburguesa pollo crujiente, lechuga, tomate, queso y mayonesa", "priceP": "6.50€", "priceG": "" },
+      { "name": "Ternera", "description": "Hamburguesa ternera, bacon, huevo, cebolla, tomate y queso", "priceP": "7.00€", "priceG": "" }
+    ]
+  },
+  {
+    "category": "Perritos",
+    "items": [
+      { "name": "King Kobra", "description": "Baguette, doble salchicha, salsa brava, bacon y tortilla", "priceP": "7.00€", "priceG": "" },
+      { "name": "Kiboca", "description": "Salchicha, queso, bacon y tortilla", "priceP": "5.00€", "priceG": "" },
+      { "name": "Cachorro", "description": "Salchicha sola", "priceP": "3.00€", "priceG": "" }
     ]
   }
 ]
