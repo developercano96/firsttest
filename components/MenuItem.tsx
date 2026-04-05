@@ -4,6 +4,7 @@ type Props = {
   priceP: string;
   priceG?: string;
   dualPrice: boolean;
+  isLast?: boolean;
 };
 
 export default function MenuItem({
@@ -11,25 +12,27 @@ export default function MenuItem({
   description,
   priceP,
   priceG,
-  dualPrice
+  dualPrice,
+  isLast
 }: Props) {
   const isDual = dualPrice === true;
 
   return (
     <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: isDual ? "1fr 60px 60px" : "1fr 80px",
-        padding: "8px",
-        borderBottom: "1px solid #eee",
-        alignItems: "center"
-      }}
+      className={`grid ${
+        isDual ? "grid-cols-[1fr_60px_60px]" : "grid-cols-[1fr_80px]"
+      } px-4 py-3 items-center ${
+        !isLast ? "border-b border-[var(--border)]" : ""
+      }`}
     >
       {/* Nombre + descripción */}
-      <div>
-        <div style={{ fontWeight: "500" }}>{name}</div>
+      <div className="pr-2">
+        <div className="font-medium text-sm leading-snug">
+          {name}
+        </div>
+
         {description && (
-          <div style={{ fontSize: "12px", color: "#666" }}>
+          <div className="text-xs text-[var(--muted)] mt-1 leading-snug">
             {description}
           </div>
         )}
@@ -38,11 +41,15 @@ export default function MenuItem({
       {/* Precios */}
       {isDual ? (
         <>
-          <div style={{ textAlign: "center" }}>{priceP || ""}</div>
-          <div style={{ textAlign: "center" }}>{priceG || ""}</div>
+          <div className="text-center text-sm font-medium">
+            {priceP || ""}
+          </div>
+          <div className="text-center text-sm font-medium">
+            {priceG || ""}
+          </div>
         </>
       ) : (
-        <div style={{ textAlign: "center" }}>
+        <div className="text-center text-sm font-medium">
           {priceP || priceG || ""}
         </div>
       )}

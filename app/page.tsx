@@ -3,17 +3,19 @@ import menuData from "../data/menu.json";
 
 export default function Home() {
   return (
-    <div style={{ backgroundColor: "white", color: "black", minHeight: "100vh", padding: "16px" }}>
-      <h1 style={{ fontSize: "24px", fontWeight: "bold", marginBottom: "16px" }}>
+    <div className="min-h-screen px-4 py-6">
+      <h1 className="text-2xl font-bold mb-6 text-center">
         Carta del Restaurante
       </h1>
-      <div>
+
+      <div className="flex flex-col gap-6">
         {menuData.map((category) => (
           <MenuCategory
             key={category.category}
-            category={category.category} 
+            category={category.category}
             dualPrice={category.dualPrice}
-            items={category.items} />
+            items={category.items}
+          />
         ))}
       </div>
     </div>

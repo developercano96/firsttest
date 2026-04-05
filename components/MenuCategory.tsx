@@ -17,35 +17,35 @@ export default function MenuCategory({ category, items, dualPrice }: Props) {
   const isDual = dualPrice === true;
 
   return (
-    <div style={{ marginBottom: "24px" }}>
-      <div style={{ border: "1px solid #ccc", borderRadius: "8px" }}>
-        
-        {/* Cabecera */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: isDual ? "1fr 60px 60px" : "1fr 80px",
-            padding: "8px",
-            fontWeight: "bold",
-            borderBottom: "1px solid #ccc"
-          }}
-        >
-          <h2 style={{ fontSize: "20px", fontWeight: "bold" }}>
-            {category}
-          </h2>
-          {isDual ? (
-            <>
-              <span style={{ textAlign: "center" }}>P</span>
-              <span style={{ textAlign: "center" }}>G</span>
-            </>
-          ) : (
-            <span style={{ textAlign: "center" }}>€</span>
-          )}
-        </div>
+    <div className="bg-[var(--card)] border border-[var(--border)] rounded-xl shadow-sm overflow-hidden">
+      
+      {/* Header */}
+      <div
+        className={`grid ${
+          isDual ? "grid-cols-[1fr_60px_60px]" : "grid-cols-[1fr_80px]"
+        } px-4 py-3 bg-[var(--primary)] text-[var(--accent)] text-sm font-semibold`}
+      > 
+        <h2 className="text-base">{category}</h2>
 
-        {/* Items */}
-        {items.map((item) => (
-          <MenuItem key={item.name} {...item} dualPrice={dualPrice} />
+        {isDual ? (
+          <>
+            <span className="text-center">P</span>
+            <span className="text-center">G</span>
+          </>
+        ) : (
+          <span className="text-center">€</span>
+        )}
+      </div>
+
+      {/* Items */}
+      <div>
+        {items.map((item, index) => (
+          <MenuItem
+            key={item.name}
+            {...item}
+            dualPrice={dualPrice}
+            isLast={index === items.length - 1}
+          />
         ))}
       </div>
     </div>
