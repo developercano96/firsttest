@@ -1,6 +1,7 @@
 [
   {
     "category": "Entrantes",
+    "dualPrice": true,
     "items": [
       { "name": "Ensalada Mixta", "description": "Lechuga, tomate, maíz, zanahoria y huevo duro", "priceP": "", "priceG": "8.00€" },
       { "name": "Ensalada Cesar", "description": "Lechuga, pollo, picatostes, queso y salsa cesar", "priceP": "", "priceG": "10.00€" },
@@ -16,6 +17,7 @@
   },
   {
     "category": "Del Mar",
+    "dualPrice": true,
     "items": [
       { "name": "Chipirones Plancha", "description": "", "priceP": "4.50€", "priceG": "12.00€" },
       { "name": "Sepia Plancha", "description": "", "priceP": "", "priceG": "12.00€" },
@@ -31,6 +33,7 @@
   },
   {
     "category": "Platos y Raciones",
+    "dualPrice": true,
     "items": [
       { "name": "Filetitos de Presa Iberica", "description": "", "priceP": "", "priceG": "16.00€" },
       { "name": "Lagarto Iberico", "description": "", "priceP": "7.50€", "priceG": "15.00€" },
@@ -51,6 +54,7 @@
   },
   {
     "category": "Baguettes",
+    "dualPrice": true,
     "items": [
       { "name": "Faberman", "description": "Pollo, tomate, jamón y alioli", "priceP": "4.00€", "priceG": "5.00€" },
       { "name": "Toreto", "description": "Pollo, jamón, salsa roquefort", "priceP": "4.00€", "priceG": "5.00€" },
@@ -64,6 +68,7 @@
   },
   {
     "category": "Sandwichs",
+    "dualPrice": false,
     "items": [
       { "name": "Mixto", "description": "York y queso", "priceP": "4.00€", "priceG": "" },
       { "name": "Vegetal", "description": "Lechuga, cebolla, tomate y atún", "priceP": "4.50€", "priceG": "" },
@@ -72,6 +77,7 @@
   },
   {
     "category": "Hamburguesas",
+    "dualPrice": false,
     "items": [
       { "name": "Completa", "description": "Hamburguesa, bacon, queso, huevo, tomate y cebolla", "priceP": "6.00€", "priceG": "" },
       { "name": "Crunchy", "description": "Hamburguesa pollo crujiente, lechuga, tomate, queso y mayonesa", "priceP": "6.50€", "priceG": "" },
@@ -80,6 +86,7 @@
   },
   {
     "category": "Perritos",
+    "dualPrice": false,
     "items": [
       { "name": "King Kobra", "description": "Baguette, doble salchicha, salsa brava, bacon y tortilla", "priceP": "7.00€", "priceG": "" },
       { "name": "Kiboca", "description": "Salchicha, queso, bacon y tortilla", "priceP": "5.00€", "priceG": "" },

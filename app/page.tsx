@@ -9,7 +9,11 @@ export default function Home() {
       </h1>
       <div>
         {menuData.map((category) => (
-          <MenuCategory key={category.category} category={category.category} items={category.items} />
+          <MenuCategory
+            key={category.category}
+            category={category.category} 
+            dualPrice={category.dualPrice}
+            items={category.items} />
         ))}
       </div>
     </div>

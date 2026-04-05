@@ -1,22 +1,51 @@
-type MenuItemProps = {
+type Props = {
   name: string;
   description: string;
   priceP: string;
   priceG?: string;
+  dualPrice: boolean;
 };
 
-export default function MenuItem({ name, description, priceP, priceG }: MenuItemProps) {
+export default function MenuItem({
+  name,
+  description,
+  priceP,
+  priceG,
+  dualPrice
+}: Props) {
+  const isDual = dualPrice === true;
+
   return (
-    <div style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderBottom: "1px solid #ccc" }}>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: isDual ? "1fr 60px 60px" : "1fr 80px",
+        padding: "8px",
+        borderBottom: "1px solid #eee",
+        alignItems: "center"
+      }}
+    >
+      {/* Nombre + descripción */}
       <div>
-        <p>{name}</p>
-        <p style={{color: "grey"}}>{description}</p>
+        <div style={{ fontWeight: "500" }}>{name}</div>
+        {description && (
+          <div style={{ fontSize: "12px", color: "#666" }}>
+            {description}
+          </div>
+        )}
       </div>
-      <span>
-        {priceP && priceG
-          ? `${priceP} / ${priceG}`
-          : priceP || priceG}
-      </span>
+
+      {/* Precios */}
+      {isDual ? (
+        <>
+          <div style={{ textAlign: "center" }}>{priceP || ""}</div>
+          <div style={{ textAlign: "center" }}>{priceG || ""}</div>
+        </>
+      ) : (
+        <div style={{ textAlign: "center" }}>
+          {priceP || priceG || ""}
+        </div>
+      )}
     </div>
   );
 }
