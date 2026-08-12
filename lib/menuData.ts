@@ -6,6 +6,8 @@ export type MenuItemData = {
   priceP: number | null;
   priceG?: number | null;
   allergens?: AllergenCode[];
+  // URL pública de Vercel Blob, o null mientras no haya foto del plato.
+  image?: string | null;
 };
 
 export type MenuCategoryData = {
@@ -34,6 +36,9 @@ function parseItem(raw: unknown, path: string): MenuItemData {
   }
   if (item.priceG !== undefined && !isNullableNumber(item.priceG)) {
     throw new Error(`${path}["${item.name}"]: "priceG" debe ser number o null`);
+  }
+  if (item.image !== undefined && item.image !== null && typeof item.image !== "string") {
+    throw new Error(`${path}["${item.name}"]: "image" debe ser string o null`);
   }
 
   const allergens = (item.allergens as unknown[] | undefined) ?? [];

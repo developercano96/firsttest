@@ -1,16 +1,14 @@
+"use client";
+
 import AllergenIcons from "./AllergenIcons";
 import { formatPrice } from "../lib/format";
 import { priceGridCols } from "../lib/priceGrid";
-import type { AllergenCode } from "../lib/allergens";
+import { useOpenDishModal } from "./DishModalContext";
+import type { MenuItemData } from "../lib/menuData";
 
-type Props = {
-  name: string;
-  description: string;
-  priceP: number | null;
-  priceG?: number | null;
+type Props = MenuItemData & {
   dualPrice: boolean;
   isLast?: boolean;
-  allergens?: AllergenCode[];
 };
 
 export default function MenuItem({
@@ -21,10 +19,15 @@ export default function MenuItem({
   dualPrice,
   isLast,
   allergens,
+  image,
 }: Props) {
+  const openDish = useOpenDishModal();
+
   return (
-    <div
-      className={`grid ${priceGridCols(dualPrice)} px-4 py-3 items-center ${
+    <button
+      type="button"
+      onClick={() => openDish({ name, description, priceP, priceG, allergens, image })}
+      className={`grid ${priceGridCols(dualPrice)} w-full px-4 py-3 items-center text-left hover:bg-[var(--primary)]/10 ${
         !isLast ? "border-b border-[var(--border)]" : ""
       }`}
     >
@@ -58,6 +61,6 @@ export default function MenuItem({
           {formatPrice(priceP ?? priceG)}
         </div>
       )}
-    </div>
+    </button>
   );
 }

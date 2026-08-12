@@ -1,5 +1,6 @@
 import MenuCategory from "../components/MenuCategory";
 import CategoryNav from "../components/CategoryNav";
+import DishModalProvider from "../components/DishModalProvider";
 import rawMenuData from "../data/menu.json";
 import { parseMenuData } from "../lib/menuData";
 
@@ -20,16 +21,18 @@ export default function Home() {
         <CategoryNav categories={menuData.map((category) => category.category)} />
       </header>
 
-      <main className="max-w-2xl mx-auto flex flex-col gap-6 px-4 py-6">
-        {menuData.map((category) => (
-          <MenuCategory
-            key={category.category}
-            category={category.category}
-            dualPrice={category.dualPrice}
-            items={category.items}
-          />
-        ))}
-      </main>
+      <DishModalProvider>
+        <main className="max-w-2xl mx-auto flex flex-col gap-6 px-4 py-6">
+          {menuData.map((category) => (
+            <MenuCategory
+              key={category.category}
+              category={category.category}
+              dualPrice={category.dualPrice}
+              items={category.items}
+            />
+          ))}
+        </main>
+      </DishModalProvider>
     </div>
   );
 }
