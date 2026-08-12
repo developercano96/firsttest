@@ -1,6 +1,6 @@
 import MenuCategory from "../components/MenuCategory";
+import CategoryNav from "../components/CategoryNav";
 import rawMenuData from "../data/menu.json";
-import { slugify } from "../lib/slugify";
 import type { AllergenCode } from "../lib/allergens";
 
 type MenuItemData = {
@@ -31,17 +31,7 @@ export default function Home() {
           <p className="text-sm opacity-80">{RESTAURANT_TAGLINE}</p>
         </div>
 
-        <nav className="max-w-2xl mx-auto flex gap-2 overflow-x-auto px-4 pb-3 text-sm">
-          {menuData.map((category) => (
-            <a
-              key={category.category}
-              href={`#${slugify(category.category)}`}
-              className="shrink-0 rounded-full bg-[var(--card)]/80 px-3 py-1 font-medium whitespace-nowrap hover:bg-[var(--card)]"
-            >
-              {category.category}
-            </a>
-          ))}
-        </nav>
+        <CategoryNav categories={menuData.map((category) => category.category)} />
       </header>
 
       <main className="max-w-2xl mx-auto flex flex-col gap-6 px-4 py-6">
