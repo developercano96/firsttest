@@ -1,10 +1,13 @@
 import MenuItem from "./MenuItem";
+import { slugify } from "../lib/slugify";
+import type { AllergenCode } from "../lib/allergens";
 
 type Item = {
   name: string;
   description: string;
   priceP: string;
   priceG?: string;
+  allergens?: AllergenCode[];
 };
 
 type Props = {
@@ -17,8 +20,11 @@ export default function MenuCategory({ category, items, dualPrice }: Props) {
   const isDual = dualPrice === true;
 
   return (
-    <div className="bg-[var(--card)] border border-[var(--border)] rounded-xl shadow-sm overflow-hidden">
-      
+    <div
+      id={slugify(category)}
+      className="scroll-mt-36 bg-[var(--card)] border border-[var(--border)] rounded-xl shadow-sm overflow-hidden"
+    >
+
       {/* Header */}
       <div
         className={`grid ${

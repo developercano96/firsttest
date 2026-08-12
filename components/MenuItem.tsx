@@ -1,3 +1,6 @@
+import AllergenIcons from "./AllergenIcons";
+import type { AllergenCode } from "../lib/allergens";
+
 type Props = {
   name: string;
   description: string;
@@ -5,6 +8,7 @@ type Props = {
   priceG?: string;
   dualPrice: boolean;
   isLast?: boolean;
+  allergens?: AllergenCode[];
 };
 
 export default function MenuItem({
@@ -13,7 +17,8 @@ export default function MenuItem({
   priceP,
   priceG,
   dualPrice,
-  isLast
+  isLast,
+  allergens,
 }: Props) {
   const isDual = dualPrice === true;
 
@@ -36,6 +41,8 @@ export default function MenuItem({
             {description}
           </div>
         )}
+
+        <AllergenIcons allergens={allergens} />
       </div>
 
       {/* Precios */}

@@ -4,11 +4,16 @@
   --bg: #fceac2;        /* fondo general muy claro */
   --card: #ffffff;      /* tarjetas blancas */
   --text: #1f2937;      /* gris oscuro suave (no negro puro) */
-  --muted: #9ca3af;     /* gris claro para descripciones */
+  --muted: #6b7280;     /* gris para descripciones */
   --border: #e5e7eb;    /* bordes muy suaves */
   --primary: #d8b68d;   /* fondo cabecera categoría */
-  --accent: #374151;  
-  --test: red;  /* texto destacado (títulos) */
+  --accent: #374151;    /* texto destacado (títulos) */
+  --background: var(--bg);
+  --foreground: var(--text);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,9 +29,51 @@ body {
   --font-mono: var(--font-geist-mono);
 }
 
+/* Colores por alérgeno (convención habitual del sector por asociación con el
+   ingrediente: trigo=dorado, leche=azul, marisco=naranja, vino/sulfitos=morado...).
+   El icono ya distingue cada alérgeno por forma; el color es un refuerzo visual. */
+:root {
+  --allergen-gluten: #b8860b;
+  --allergen-crustaceans: #d9622b;
+  --allergen-eggs: #d4a017;
+  --allergen-fish: #1f7a8c;
+  --allergen-peanuts: #8a5a2b;
+  --allergen-soy: #3f8f4f;
+  --allergen-milk: #5b7fc4;
+  --allergen-nuts: #6b4226;
+  --allergen-celery: #6b8e23;
+  --allergen-mustard: #8a8a1f;
+  --allergen-sesame: #a9895a;
+  --allergen-sulphites: #7b4b94;
+  --allergen-lupin: #9256b0;
+  --allergen-molluscs: #2e8b7a;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #16140f;
+    --card: #211d16;
+    --text: #f1ece1;
+    --muted: #a89f8f;
+    --border: #383225;
+    --primary: #8a6a43;
+    --accent: #f1ece1;
+    --background: var(--bg);
+    --foreground: var(--text);
+
+    --allergen-gluten: #e0af3d;
+    --allergen-crustaceans: #f0854f;
+    --allergen-eggs: #f2c94c;
+    --allergen-fish: #4fb3c9;
+    --allergen-peanuts: #c48a4f;
+    --allergen-soy: #6cbf7a;
+    --allergen-milk: #93aef0;
+    --allergen-nuts: #a9754a;
+    --allergen-celery: #9dbf4b;
+    --allergen-mustard: #bcbf4f;
+    --allergen-sesame: #d4b483;
+    --allergen-sulphites: #b085c9;
+    --allergen-lupin: #c88ce0;
+    --allergen-molluscs: #55c2ab;
   }
 }
