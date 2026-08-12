@@ -123,7 +123,7 @@ export default function CategoryNav({ categories }: Props) {
   return (
     <nav
       ref={navRef}
-      className="max-w-2xl mx-auto flex gap-2 overflow-x-auto px-4 pb-3 text-sm"
+      className="max-w-2xl mx-auto flex gap-2 overflow-x-auto px-4 pb-3 text-base"
     >
       {categories.map((category) => {
         const slug = slugify(category);

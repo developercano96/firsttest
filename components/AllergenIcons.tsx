@@ -13,7 +13,7 @@ export default function AllergenIcons({ allergens }: Props) {
         const info = ALLERGENS[code];
         if (!info) return null;
         const { label, Icon } = info;
-        const color = `var(--allergen-${code})`;
+        const color = `light-dark(${info.color.light}, ${info.color.dark})`;
 
         return (
           <span
@@ -26,7 +26,7 @@ export default function AllergenIcons({ allergens }: Props) {
               backgroundColor: `color-mix(in oklab, ${color} 18%, transparent)`,
             }}
           >
-            <Icon size={25} />
+            <Icon size={20} />
           </span>
         );
       })}

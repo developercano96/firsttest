@@ -3,94 +3,94 @@
     "category": "Entrantes",
     "dualPrice": true,
     "items": [
-      { "name": "Ensalada Mixta", "description": "Lechuga, tomate, maíz, zanahoria y huevo duro", "priceP": "", "priceG": "8.00€", "allergens": ["eggs"] },
-      { "name": "Ensalada Cesar", "description": "Lechuga, pollo, picatostes, queso y salsa cesar", "priceP": "", "priceG": "10.00€", "allergens": ["gluten","milk","eggs","mustard"] },
-      { "name": "Ensalada de la Casa", "description": "Lechuga, tomate, queso, frutos secos y cebolla crujiente", "priceP": "", "priceG": "10.00€", "allergens": ["milk","nuts"] },
-      { "name": "Ensalada de la Mari", "description": "Lechuga, rúcula, canónigos, arándanos y miel", "priceP": "", "priceG": "10.00€", "allergens": [] },
-      { "name": "Picadillo Tomate Cebolla", "description": "A elegir entre caballa o atún", "priceP": "4.00€", "priceG": "8.00€", "allergens": ["fish"] },
-      { "name": "Tomate Aliñado con Ajo y Oregano", "description": "", "priceP": "4.00€", "priceG": "8.00€", "allergens": [] },
-      { "name": "Pimientos Asados con Cebolla y Atun", "description": "", "priceP": "4.00€", "priceG": "8.00€", "allergens": ["fish"] },
-      { "name": "Ensaladilla Rusa", "description": "", "priceP": "3.50€", "priceG": "7.00€", "allergens": ["eggs","fish"] },
-      { "name": "Papas Saladas", "description": "A elegir entre roquefort, alioli o brava", "priceP": "4.00€", "priceG": "8.00€", "allergens": ["milk","eggs"] },
-      { "name": "Papas de la Casa", "description": "Patatas, gambas y salsa de la casa", "priceP": "4.50€", "priceG": "9.00€", "allergens": ["crustaceans"] }
+      { "name": "Ensalada Mixta", "description": "Lechuga, tomate, maíz, zanahoria y huevo duro", "priceP": null, "priceG": 8, "allergens": ["eggs"] },
+      { "name": "Ensalada Cesar", "description": "Lechuga, pollo, picatostes, queso y salsa cesar", "priceP": null, "priceG": 10, "allergens": ["gluten","milk","eggs","mustard"] },
+      { "name": "Ensalada de la Casa", "description": "Lechuga, tomate, queso, frutos secos y cebolla crujiente", "priceP": null, "priceG": 10, "allergens": ["milk","nuts"] },
+      { "name": "Ensalada de la Mari", "description": "Lechuga, rúcula, canónigos, arándanos y miel", "priceP": null, "priceG": 10, "allergens": [] },
+      { "name": "Picadillo Tomate Cebolla", "description": "A elegir entre caballa o atún", "priceP": 4, "priceG": 8, "allergens": ["fish"] },
+      { "name": "Tomate Aliñado con Ajo y Oregano", "description": "", "priceP": 4, "priceG": 8, "allergens": [] },
+      { "name": "Pimientos Asados con Cebolla y Atun", "description": "", "priceP": 4, "priceG": 8, "allergens": ["fish"] },
+      { "name": "Ensaladilla Rusa", "description": "", "priceP": 3.5, "priceG": 7, "allergens": ["eggs","fish"] },
+      { "name": "Papas Saladas", "description": "A elegir entre roquefort, alioli o brava", "priceP": 4, "priceG": 8, "allergens": ["milk","eggs"] },
+      { "name": "Papas de la Casa", "description": "Patatas, gambas y salsa de la casa", "priceP": 4.5, "priceG": 9, "allergens": ["crustaceans"] }
     ]
   },
   {
     "category": "Del Mar",
     "dualPrice": true,
     "items": [
-      { "name": "Chipirones Plancha", "description": "", "priceP": "4.50€", "priceG": "12.00€", "allergens": ["molluscs"] },
-      { "name": "Sepia Plancha", "description": "", "priceP": "", "priceG": "12.00€", "allergens": ["molluscs"] },
-      { "name": "Gallo de San Pedro Plancha", "description": "", "priceP": "", "priceG": "15.00€", "allergens": ["fish"] },
-      { "name": "Dorada Plancha", "description": "", "priceP": "6.00€", "priceG": "12.00€", "allergens": ["fish"] },
-      { "name": "Chocos Fritos", "description": "", "priceP": "", "priceG": "12.00€", "allergens": ["molluscs","gluten"] },
-      { "name": "Cazon en Adobo Frito", "description": "", "priceP": "4.50€", "priceG": "12.00€", "allergens": ["fish","gluten"] },
-      { "name": "Boquerones Fritos", "description": "", "priceP": "", "priceG": "11.00€", "allergens": ["fish","gluten"] },
-      { "name": "Puntillitas", "description": "", "priceP": "4.50€", "priceG": "9.00€", "allergens": ["molluscs","gluten"] },
-      { "name": "Pavia de Merluza", "description": "", "priceP": "4.50€", "priceG": "9.00€", "allergens": ["fish","gluten","eggs"] },
-      { "name": "Pescado Frito Variado", "description": "Chocos, cazón y boquerones (p/p)", "priceP": "", "priceG": "15.00€", "allergens": ["fish","molluscs","gluten"] }
+      { "name": "Chipirones Plancha", "description": "", "priceP": 4.5, "priceG": 12, "allergens": ["molluscs"] },
+      { "name": "Sepia Plancha", "description": "", "priceP": null, "priceG": 12, "allergens": ["molluscs"] },
+      { "name": "Gallo de San Pedro Plancha", "description": "", "priceP": null, "priceG": 15, "allergens": ["fish"] },
+      { "name": "Dorada Plancha", "description": "", "priceP": 6, "priceG": 12, "allergens": ["fish"] },
+      { "name": "Chocos Fritos", "description": "", "priceP": null, "priceG": 12, "allergens": ["molluscs","gluten"] },
+      { "name": "Cazon en Adobo Frito", "description": "", "priceP": 4.5, "priceG": 12, "allergens": ["fish","gluten"] },
+      { "name": "Boquerones Fritos", "description": "", "priceP": null, "priceG": 11, "allergens": ["fish","gluten"] },
+      { "name": "Puntillitas", "description": "", "priceP": 4.5, "priceG": 9, "allergens": ["molluscs","gluten"] },
+      { "name": "Pavia de Merluza", "description": "", "priceP": 4.5, "priceG": 9, "allergens": ["fish","gluten","eggs"] },
+      { "name": "Pescado Frito Variado", "description": "Chocos, cazón y boquerones (p/p)", "priceP": null, "priceG": 15, "allergens": ["fish","molluscs","gluten"] }
     ]
   },
   {
     "category": "Platos y Raciones",
     "dualPrice": true,
     "items": [
-      { "name": "Filetitos de Presa Iberica", "description": "", "priceP": "", "priceG": "16.00€", "allergens": [] },
-      { "name": "Lagarto Iberico", "description": "", "priceP": "7.50€", "priceG": "15.00€", "allergens": [] },
-      { "name": "Chuletitas de Cordero", "description": "", "priceP": "", "priceG": "19.50€", "allergens": [] },
-      { "name": "Churrasco de Pollo o Cerdo", "description": "", "priceP": "", "priceG": "10.00€", "allergens": [] },
-      { "name": "Carrillada en Salsa", "description": "", "priceP": "4.50€", "priceG": "9.00€", "allergens": ["gluten"] },
-      { "name": "Rabo de Toro", "description": "", "priceP": "", "priceG": "14.00€", "allergens": ["gluten"] },
-      { "name": "Albóndigas en Salsa", "description": "", "priceP": "4.50€", "priceG": "9.00€", "allergens": ["gluten","eggs"] },
-      { "name": "Revuelto Campero", "description": "", "priceP": "", "priceG": "10.00€", "allergens": ["eggs"] },
-      { "name": "Platos Combinados", "description": "", "priceP": "", "priceG": "9.00€", "allergens": ["eggs"] },
-      { "name": "Huevos con Patatas", "description": "", "priceP": "", "priceG": "7.00€", "allergens": ["eggs"] },
-      { "name": "Super Combinado XXL", "description": "Cerdo, patatas, bacon, huevo, pimiento y chorizo", "priceP": "", "priceG": "12.00€", "allergens": ["eggs"] },
-      { "name": "Solomillo", "description": "Salsa a elegir roquefort, pimienta o de la casa", "priceP": "4.50€", "priceG": "9.00€", "allergens": ["milk"] },
-      { "name": "Huevos Glaseados", "description": "", "priceP": "4.00€", "priceG": "8.00€", "allergens": ["eggs"] },
-      { "name": "Flamenquines Caseros", "description": "Jamón york y queso", "priceP": "4.50€", "priceG": "9.00€", "allergens": ["gluten","milk","eggs"] },
-      { "name": "Lengua en Salsa", "description": "", "priceP": "4.50€", "priceG": "9.00€", "allergens": ["gluten"] }
+      { "name": "Filetitos de Presa Iberica", "description": "", "priceP": null, "priceG": 16, "allergens": [] },
+      { "name": "Lagarto Iberico", "description": "", "priceP": 7.5, "priceG": 15, "allergens": [] },
+      { "name": "Chuletitas de Cordero", "description": "", "priceP": null, "priceG": 19.5, "allergens": [] },
+      { "name": "Churrasco de Pollo o Cerdo", "description": "", "priceP": null, "priceG": 10, "allergens": [] },
+      { "name": "Carrillada en Salsa", "description": "", "priceP": 4.5, "priceG": 9, "allergens": ["gluten"] },
+      { "name": "Rabo de Toro", "description": "", "priceP": null, "priceG": 14, "allergens": ["gluten"] },
+      { "name": "Albóndigas en Salsa", "description": "", "priceP": 4.5, "priceG": 9, "allergens": ["gluten","eggs"] },
+      { "name": "Revuelto Campero", "description": "", "priceP": null, "priceG": 10, "allergens": ["eggs"] },
+      { "name": "Platos Combinados", "description": "", "priceP": null, "priceG": 9, "allergens": ["eggs"] },
+      { "name": "Huevos con Patatas", "description": "", "priceP": null, "priceG": 7, "allergens": ["eggs"] },
+      { "name": "Super Combinado XXL", "description": "Cerdo, patatas, bacon, huevo, pimiento y chorizo", "priceP": null, "priceG": 12, "allergens": ["eggs"] },
+      { "name": "Solomillo", "description": "Salsa a elegir roquefort, pimienta o de la casa", "priceP": 4.5, "priceG": 9, "allergens": ["milk"] },
+      { "name": "Huevos Glaseados", "description": "", "priceP": 4, "priceG": 8, "allergens": ["eggs"] },
+      { "name": "Flamenquines Caseros", "description": "Jamón york y queso", "priceP": 4.5, "priceG": 9, "allergens": ["gluten","milk","eggs"] },
+      { "name": "Lengua en Salsa", "description": "", "priceP": 4.5, "priceG": 9, "allergens": ["gluten"] }
     ]
   },
   {
     "category": "Baguettes",
     "dualPrice": true,
     "items": [
-      { "name": "Faberman", "description": "Pollo, tomate, jamón y alioli", "priceP": "4.00€", "priceG": "5.00€", "allergens": ["gluten","eggs"] },
-      { "name": "Toreto", "description": "Pollo, jamón, salsa roquefort", "priceP": "4.00€", "priceG": "5.00€", "allergens": ["gluten","milk"] },
-      { "name": "Baghetto", "description": "Pollo, jamón, salsa roquefort, lechuga", "priceP": "4.00€", "priceG": "6.00€", "allergens": ["gluten","milk"] },
-      { "name": "Campera", "description": "Carne mechada, jamón y tomate", "priceP": "4.00€", "priceG": "6.00€", "allergens": ["gluten"] },
-      { "name": "Sabrosa", "description": "Panceta al horno y queso", "priceP": "4.00€", "priceG": "5.00€", "allergens": ["gluten","milk"] },
-      { "name": "Gaditana", "description": "Palitos de cangrejo, salsa rosa, lechuga, pimiento piquillo, tomate y atún", "priceP": "4.00€", "priceG": "5.00€", "allergens": ["gluten","fish","crustaceans","eggs"] },
-      { "name": "Empana", "description": "Filete de pollo empanado", "priceP": "4.00€", "priceG": "5.00€", "allergens": ["gluten","eggs"] },
-      { "name": "Pio-Pio", "description": "Pollo, tomate y jamón", "priceP": "4.00€", "priceG": "5.00€", "allergens": ["gluten"] }
+      { "name": "Faberman", "description": "Pollo, tomate, jamón y alioli", "priceP": 4, "priceG": 5, "allergens": ["gluten","eggs"] },
+      { "name": "Toreto", "description": "Pollo, jamón, salsa roquefort", "priceP": 4, "priceG": 5, "allergens": ["gluten","milk"] },
+      { "name": "Baghetto", "description": "Pollo, jamón, salsa roquefort, lechuga", "priceP": 4, "priceG": 6, "allergens": ["gluten","milk"] },
+      { "name": "Campera", "description": "Carne mechada, jamón y tomate", "priceP": 4, "priceG": 6, "allergens": ["gluten"] },
+      { "name": "Sabrosa", "description": "Panceta al horno y queso", "priceP": 4, "priceG": 5, "allergens": ["gluten","milk"] },
+      { "name": "Gaditana", "description": "Palitos de cangrejo, salsa rosa, lechuga, pimiento piquillo, tomate y atún", "priceP": 4, "priceG": 5, "allergens": ["gluten","fish","crustaceans","eggs"] },
+      { "name": "Empana", "description": "Filete de pollo empanado", "priceP": 4, "priceG": 5, "allergens": ["gluten","eggs"] },
+      { "name": "Pio-Pio", "description": "Pollo, tomate y jamón", "priceP": 4, "priceG": 5, "allergens": ["gluten"] }
     ]
   },
   {
     "category": "Sandwichs",
     "dualPrice": false,
     "items": [
-      { "name": "Mixto", "description": "York y queso", "priceP": "4.00€", "priceG": "", "allergens": ["gluten","milk"] },
-      { "name": "Vegetal", "description": "Lechuga, cebolla, tomate y atún", "priceP": "4.50€", "priceG": "", "allergens": ["gluten","fish"] },
-      { "name": "Club", "description": "Pollo, lechuga, huevo, bacon, york y queso", "priceP": "7.00€", "priceG": "", "allergens": ["gluten","eggs","milk"] }
+      { "name": "Mixto", "description": "York y queso", "priceP": 4, "priceG": null, "allergens": ["gluten","milk"] },
+      { "name": "Vegetal", "description": "Lechuga, cebolla, tomate y atún", "priceP": 4.5, "priceG": null, "allergens": ["gluten","fish"] },
+      { "name": "Club", "description": "Pollo, lechuga, huevo, bacon, york y queso", "priceP": 7, "priceG": null, "allergens": ["gluten","eggs","milk"] }
     ]
   },
   {
     "category": "Hamburguesas",
     "dualPrice": false,
     "items": [
-      { "name": "Completa", "description": "Hamburguesa, bacon, queso, huevo, tomate y cebolla", "priceP": "6.00€", "priceG": "", "allergens": ["gluten","milk","eggs"] },
-      { "name": "Crunchy", "description": "Hamburguesa pollo crujiente, lechuga, tomate, queso y mayonesa", "priceP": "6.50€", "priceG": "", "allergens": ["gluten","milk","eggs"] },
-      { "name": "Ternera", "description": "Hamburguesa ternera, bacon, huevo, cebolla, tomate y queso", "priceP": "7.00€", "priceG": "", "allergens": ["gluten","milk","eggs"] }
+      { "name": "Completa", "description": "Hamburguesa, bacon, queso, huevo, tomate y cebolla", "priceP": 6, "priceG": null, "allergens": ["gluten","milk","eggs"] },
+      { "name": "Crunchy", "description": "Hamburguesa pollo crujiente, lechuga, tomate, queso y mayonesa", "priceP": 6.5, "priceG": null, "allergens": ["gluten","milk","eggs"] },
+      { "name": "Ternera", "description": "Hamburguesa ternera, bacon, huevo, cebolla, tomate y queso", "priceP": 7, "priceG": null, "allergens": ["gluten","milk","eggs"] }
     ]
   },
   {
     "category": "Perritos",
     "dualPrice": false,
     "items": [
-      { "name": "King Kobra", "description": "Baguette, doble salchicha, salsa brava, bacon y tortilla", "priceP": "7.00€", "priceG": "", "allergens": ["gluten","eggs"] },
-      { "name": "Kiboca", "description": "Salchicha, queso, bacon y tortilla", "priceP": "5.00€", "priceG": "", "allergens": ["gluten","milk","eggs"] },
-      { "name": "Cachorro", "description": "Salchicha sola", "priceP": "3.00€", "priceG": "", "allergens": ["gluten"] }
+      { "name": "King Kobra", "description": "Baguette, doble salchicha, salsa brava, bacon y tortilla", "priceP": 7, "priceG": null, "allergens": ["gluten","eggs"] },
+      { "name": "Kiboca", "description": "Salchicha, queso, bacon y tortilla", "priceP": 5, "priceG": null, "allergens": ["gluten","milk","eggs"] },
+      { "name": "Cachorro", "description": "Salchicha sola", "priceP": 3, "priceG": null, "allergens": ["gluten"] }
     ]
   }
 ]
