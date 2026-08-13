@@ -1,17 +1,21 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { IoInformationCircleOutline } from "react-icons/io5";
 import { slugify } from "../lib/slugify";
+import { ALLERGEN_LEGEND_ID } from "../lib/allergens";
 
 type Props = {
   categories: string[];
+  showAllergenLink?: boolean;
 };
 
 // Margen extra al llevar el pill activo a la vista, para que se asome el
 // siguiente/anterior y quede claro que hay más categorías en esa dirección.
 const SCROLL_PADDING = 64;
-// Debe quedar por debajo de la altura real del header sticky (scroll-mt-36 = 144px).
-const TRIGGER_OFFSET = 150;
+// Holgura sobre el alto real de la cabecera: la línea que decide qué categoría
+// está activa cae justo por debajo de ella.
+const TRIGGER_MARGIN = 6;
 // Tras pulsar un ancla, cuánto esperar sin eventos de scroll para considerar
 // que el scroll animado ha terminado y recalcular la categoría activa.
 const CLICK_SETTLE_DELAY = 150;
@@ -19,10 +23,14 @@ const CLICK_SETTLE_DELAY = 150;
 // a la vista), para no dejar el listener bloqueado indefinidamente.
 const CLICK_FALLBACK_DELAY = 600;
 
-export default function CategoryNav({ categories }: Props) {
+export default function CategoryNav({ categories, showAllergenLink }: Props) {
   const navRef = useRef<HTMLElement>(null);
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
   const [active, setActive] = useState(() => slugify(categories[0] ?? ""));
+  // Alto real de la cabecera. Se mide en vez de fijarlo porque depende del
+  // logo de cada cliente, y alimenta tanto el scrollspy como el
+  // scroll-margin-top de las secciones (--header-h).
+  const headerHeightRef = useRef(0);
 
   // Mientras el scroll lo provoca un clic en el nav, se ignoran las
   // categorías intermedias por las que se pasa de camino al destino.
@@ -37,6 +45,28 @@ export default function CategoryNav({ categories }: Props) {
       updateRef.current();
     }, delay);
   }
+
+  // El logo de la cabecera se carga de forma asíncrona, así que además de
+  // medir al montar hay que volver a medir cuando termine de cargar y cuando
+  // cambie el tamaño de la ventana.
+  useEffect(() => {
+    const header = document.getElementById("site-header");
+    if (!header) return;
+
+    function measure() {
+      const height = header!.offsetHeight;
+      if (height === headerHeightRef.current) return;
+      headerHeightRef.current = height;
+      document.documentElement.style.setProperty("--header-h", `${height}px`);
+      updateRef.current();
+    }
+
+    measure();
+
+    const observer = new ResizeObserver(measure);
+    observer.observe(header);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const sections = categories
@@ -58,9 +88,10 @@ export default function CategoryNav({ categories }: Props) {
         return;
       }
 
+      const trigger = headerHeightRef.current + TRIGGER_MARGIN;
       let currentId = sections[0].id;
       for (const section of sections) {
-        if (section.getBoundingClientRect().top <= TRIGGER_OFFSET) {
+        if (section.getBoundingClientRect().top <= trigger) {
           currentId = section.id;
         } else {
           break;
@@ -129,6 +160,9 @@ export default function CategoryNav({ categories }: Props) {
         const slug = slugify(category);
         const isActive = active === slug;
 
+        // Los pills se definen contra --primary (el fondo de la cabecera) y no
+        // contra la tarjeta, para que la paleta pueda llevar cabecera clara u
+        // oscura sin retocar estas clases.
         return (
           <a
             key={slug}
@@ -139,14 +173,26 @@ export default function CategoryNav({ categories }: Props) {
             onClick={() => handleClick(slug)}
             className={`shrink-0 rounded-full px-3 py-1 font-medium whitespace-nowrap transition-colors ${
               isActive
-                ? "bg-[var(--accent)] text-[var(--card)]"
-                : "bg-[var(--card)]/80 hover:bg-[var(--card)]"
+                ? "bg-[var(--accent)] text-[var(--primary)]"
+                : "bg-[var(--accent)]/12 hover:bg-[var(--accent)]/20"
             }`}
           >
             {category}
           </a>
         );
       })}
+
+      {/* Atajo a la leyenda. No es una categoría, así que queda fuera del
+          scrollspy y se distingue con borde en vez de relleno. */}
+      {showAllergenLink && (
+        <a
+          href={`#${ALLERGEN_LEGEND_ID}`}
+          className="shrink-0 inline-flex items-center gap-1 rounded-full border border-[var(--accent)]/40 px-3 py-1 font-medium whitespace-nowrap"
+        >
+          <IoInformationCircleOutline size={18} />
+          Alérgenos
+        </a>
+      )}
     </nav>
   );
 }

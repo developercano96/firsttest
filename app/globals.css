@@ -1,21 +1,42 @@
 @import "tailwindcss";
 
+/* Paleta base de la plantilla: pizarra y hueso. Monocromo deliberado — no
+   apunta a ninguna cocina concreta, así que sirve igual de muestra para un bar
+   de tapas, un sushi o una cafetería de especialidad, que es justo lo que se
+   le pide a la app de demostración.
+
+   Para personalizar por cliente basta con tocar --primary y --accent: son el
+   único par con carga de marca; el resto son neutros de soporte. La cabecera
+   puede ser clara u oscura indistintamente, porque los pills del nav se
+   definen en términos de --accent sobre --primary y no de la tarjeta.
+
+   Al cambiarlos hay que mantener el contraste de los pares que la interfaz
+   superpone de verdad:
+     accent sobre primary        (títulos de cabecera)  >= 4.5:1
+     primary sobre accent        (pill activo)          >= 4.5:1
+     accent sobre accent al 12%  (pill inactivo)        >= 4.5:1
+     text / muted sobre card     (plato y descripción)  >= 4.5:1 */
 :root {
   color-scheme: light dark;
 
-  --bg: #fceac2;        /* fondo general muy claro */
-  --card: #ffffff;      /* tarjetas blancas */
-  --text: #1f2937;      /* gris oscuro suave (no negro puro) */
-  --muted: #6b7280;     /* gris para descripciones */
-  --border: #e5e7eb;    /* bordes muy suaves */
-  --primary: #d8b68d;   /* fondo cabecera categoría */
-  --accent: #374151;    /* texto destacado (títulos) */
+  --bg: #f4f4f2;        /* hueso: da profundidad a las tarjetas blancas */
+  --card: #ffffff;      /* tarjetas blancas: las fotos de plato destacan */
+  --text: #1d1d1b;      /* casi negro, nunca negro puro */
+  --muted: #66665f;     /* gris de apoyo para descripciones */
+  --border: #e4e4df;    /* bordes suaves */
+  --primary: #2f3331;   /* pizarra: fondo de cabeceras */
+  --accent: #f4f3ee;    /* hueso: texto sobre --primary y pill activo */
   --background: var(--bg);
   --foreground: var(--text);
 }
 
 html {
   scroll-behavior: smooth;
+
+  /* Alto de la cabecera sticky. CategoryNav lo mide y lo reescribe al montar,
+     porque cambia con el logo de cada cliente; este valor solo cubre el primer
+     pintado antes de que corra el JS. */
+  --header-h: 168px;
 }
 
 body {
@@ -31,15 +52,17 @@ body {
   --font-mono: var(--font-geist-mono);
 }
 
+/* En oscuro la cabecera se aclara respecto al fondo (en vez de oscurecerse
+   como en claro), para que siga leyéndose como una banda separada. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #16140f;
-    --card: #211d16;
-    --text: #f1ece1;
-    --muted: #a89f8f;
-    --border: #383225;
-    --primary: #8a6a43;
-    --accent: #f1ece1;
+    --bg: #111312;
+    --card: #1b1e1d;
+    --text: #eceeec;
+    --muted: #98a09c;
+    --border: #2b302e;
+    --primary: #3d4442;
+    --accent: #eceeec;
     --background: var(--bg);
     --foreground: var(--text);
   }

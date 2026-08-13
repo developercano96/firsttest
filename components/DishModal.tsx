@@ -68,7 +68,9 @@ export default function DishModal({ item, onRequestClose }: Props) {
         className="max-h-[90vh] w-full overflow-y-auto rounded-t-2xl bg-[var(--card)] text-[var(--text)] sm:max-w-md sm:rounded-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative aspect-4/3 bg-[var(--primary)]/20">
+        {/* El tinte se queda en 10%: con una cabecera oscura, al 20% el fondo
+            bajaba de 4.5:1 contra el texto "Foto no disponible". */}
+        <div className="relative aspect-4/3 bg-[var(--primary)]/10">
           {item.image ? (
             <>
               {!imageLoaded && (
@@ -117,7 +119,7 @@ export default function DishModal({ item, onRequestClose }: Props) {
             <p className="mt-1 text-sm leading-snug text-[var(--muted)]">{item.description}</p>
           )}
 
-          <AllergenIcons allergens={item.allergens} />
+          <AllergenIcons allergens={item.allergens} withLabels />
         </div>
       </div>
     </div>

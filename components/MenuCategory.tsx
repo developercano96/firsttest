@@ -13,7 +13,7 @@ export default function MenuCategory({ category, items, dualPrice }: Props) {
   return (
     <div
       id={slugify(category)}
-      className="scroll-mt-36 bg-[var(--card)] border border-[var(--border)] rounded-xl shadow-sm overflow-hidden"
+      className="scroll-mt-[var(--header-h)] bg-[var(--card)] border border-[var(--border)] rounded-xl shadow-sm overflow-hidden"
     >
 
       {/* Header */}
@@ -24,8 +24,8 @@ export default function MenuCategory({ category, items, dualPrice }: Props) {
 
         {dualPrice ? (
           <>
-            <span className="text-center">P</span>
-            <span className="text-center">G</span>
+            <span className="text-center text-sm">Peq.</span>
+            <span className="text-center text-sm">Gde.</span>
           </>
         ) : (
           <span className="text-center">€</span>

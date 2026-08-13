@@ -1,4 +1,4 @@
-import { ALLERGENS, type AllergenCode } from "./allergens";
+import { ALLERGENS, ALLERGEN_ORDER, type AllergenCode } from "./allergens";
 
 export type MenuItemData = {
   name: string;
@@ -52,6 +52,16 @@ function parseItem(raw: unknown, path: string): MenuItemData {
   });
 
   return item as unknown as MenuItemData;
+}
+
+// Alérgenos que aparecen realmente en esta carta, para que la leyenda liste
+// solo lo que el cliente puede encontrarse y no los 14 del reglamento.
+export function collectAllergens(menu: MenuCategoryData[]): AllergenCode[] {
+  const used = new Set(
+    menu.flatMap((category) => category.items).flatMap((item) => item.allergens ?? []),
+  );
+
+  return ALLERGEN_ORDER.filter((code) => used.has(code));
 }
 
 export function parseMenuData(raw: unknown): MenuCategoryData[] {
