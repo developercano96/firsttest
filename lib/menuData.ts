@@ -2,6 +2,10 @@ import { ALLERGENS, ALLERGEN_ORDER, type AllergenCode } from "./allergens";
 
 export type MenuItemData = {
   name: string;
+  // Qué lleva el plato. Se muestra en la fila de la carta y en el modal.
+  ingredients: string;
+  // Cómo es el plato: textura, punto, cómo se sirve. Solo en el modal, para
+  // no alargar la fila. Puede ir vacía si no aporta nada.
   description: string;
   priceP: number | null;
   priceG?: number | null;
@@ -27,6 +31,9 @@ function parseItem(raw: unknown, path: string): MenuItemData {
 
   if (typeof item.name !== "string" || !item.name) {
     throw new Error(`${path}: falta "name"`);
+  }
+  if (typeof item.ingredients !== "string") {
+    throw new Error(`${path}["${item.name}"]: "ingredients" debe ser string`);
   }
   if (typeof item.description !== "string") {
     throw new Error(`${path}["${item.name}"]: "description" debe ser string`);

@@ -115,8 +115,20 @@ export default function DishModal({ item, onRequestClose }: Props) {
         <div className="p-4">
           <h3 className="text-lg font-semibold">{item.name}</h3>
 
+          {item.ingredients && (
+            <p className="mt-1 text-sm leading-snug text-[var(--muted)]">{item.ingredients}</p>
+          )}
+
+          {/* Terciario respecto al nombre y a los ingredientes. La jerarquía se
+              marca con cursiva y con el recuadro hundido, no bajando la
+              opacidad: por debajo del 90% este gris cae de 4.5:1 en claro.
+              El fondo es --bg (la superficie hundida de la paleta) en vez de
+              un tinte de --primary, que en modo oscuro apenas se distinguiría
+              de la tarjeta; el borde es lo que le da definición al recuadro. */}
           {item.description && (
-            <p className="mt-1 text-sm leading-snug text-[var(--muted)]">{item.description}</p>
+            <p className="mt-3 mb-4 rounded-lg border border-[var(--border)] bg-[var(--bg)] p-3 text-sm italic leading-snug text-[var(--muted)]">
+              {item.description}
+            </p>
           )}
 
           <AllergenIcons allergens={item.allergens} withLabels />

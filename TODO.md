@@ -6,6 +6,7 @@ Lista de mejoras identificadas en revisión de código (2026-08-12/13). Se van m
 
 - [x] **1. Menú como JSON estático compilado** — **descartado como problema**: es el modelo de negocio pretendido (SaaS donde el cambio de carta es un servicio de pago que gestionamos nosotros, no autogestión del restaurante). Pendiente sí queda pensar el flujo *interno* para generar el JSON de cada cliente nuevo a partir de su carta física, y la arquitectura multi-tenant para servir un JSON distinto por restaurante.
 - [ ] **2. Alérgenos inferidos a mano** (acordado como MVP) — antes de producción real, esos datos deberían venir confirmados por el restaurante, no adivinados por contexto.
+- [ ] **20. Descripciones de plato inventadas** — las 52 `description` de `data/menu.json` son texto de relleno escrito para la demo, no información real de ningún restaurante. Mismo tratamiento que la tarea 2: para un cliente real tienen que venir de él, o al menos pasar su validación. Sirven perfectamente para vender la app; no para servirlas a un comensal.
 - [ ] **3. Todo en un único árbol de Server Components sin code-splitting por categoría** — **diferido**: no es problema con 52 items; revisitar solo si algún cliente del SaaS tiene una carta mucho más grande (p. ej. 300+ referencias) donde el streaming/code-splitting por categoría empiece a aportar valor.
 
 ## Funcionalidad

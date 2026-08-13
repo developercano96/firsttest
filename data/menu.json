@@ -3,94 +3,94 @@
     "category": "Entrantes",
     "dualPrice": true,
     "items": [
-      { "name": "Ensalada Mixta", "description": "Lechuga, tomate, maíz, zanahoria y huevo duro", "priceP": null, "priceG": 8, "allergens": ["eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Ensalada Cesar", "description": "Lechuga, pollo, picatostes, queso y salsa cesar", "priceP": null, "priceG": 10, "allergens": ["gluten","milk","eggs","mustard"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Ensalada de la Casa", "description": "Lechuga, tomate, queso, frutos secos y cebolla crujiente", "priceP": null, "priceG": 10, "allergens": ["milk","nuts"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Ensalada de la Mari", "description": "Lechuga, rúcula, canónigos, arándanos y miel", "priceP": null, "priceG": 10, "allergens": [], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Picadillo Tomate Cebolla", "description": "A elegir entre caballa o atún", "priceP": 4, "priceG": 8, "allergens": ["fish"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Tomate Aliñado con Ajo y Oregano", "description": "", "priceP": 4, "priceG": 8, "allergens": [], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Pimientos Asados con Cebolla y Atun", "description": "", "priceP": 4, "priceG": 8, "allergens": ["fish"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Ensaladilla Rusa", "description": "", "priceP": 3.5, "priceG": 7, "allergens": ["eggs","fish"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Papas Saladas", "description": "A elegir entre roquefort, alioli o brava", "priceP": 4, "priceG": 8, "allergens": ["milk","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Papas de la Casa", "description": "Patatas, gambas y salsa de la casa", "priceP": 4.5, "priceG": 9, "allergens": ["crustaceans"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
+      { "name": "Ensalada Mixta", "ingredients": "Lechuga, tomate, maíz, zanahoria y huevo duro", "description": "La de siempre, fresca y sin complicaciones. Para empezar o para compartir.", "priceP": null, "priceG": 8, "allergens": ["eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Ensalada Cesar", "ingredients": "Lechuga, pollo, picatostes, queso y salsa cesar", "description": "Cremosa y contundente, con el pollo templado recién hecho.", "priceP": null, "priceG": 10, "allergens": ["gluten","milk","eggs","mustard"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Ensalada de la Casa", "ingredients": "Lechuga, tomate, queso, frutos secos y cebolla crujiente", "description": "Nuestra versión, con el contraste dulce del crujiente de cebolla.", "priceP": null, "priceG": 10, "allergens": ["milk","nuts"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Ensalada de la Mari", "ingredients": "Lechuga, rúcula, canónigos, arándanos y miel", "description": "Hojas tiernas con un punto dulce. La receta de la Mari, tal cual.", "priceP": null, "priceG": 10, "allergens": [], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Picadillo Tomate Cebolla", "ingredients": "A elegir entre caballa o atún", "description": "Aliñado al momento y bien frío. Verano en un plato.", "priceP": 4, "priceG": 8, "allergens": ["fish"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Tomate Aliñado con Ajo y Oregano", "ingredients": "", "description": "Tomate de temporada, aceite de oliva y poco más. No hace falta.", "priceP": 4, "priceG": 8, "allergens": [], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Pimientos Asados con Cebolla y Atun", "ingredients": "", "description": "Asados despacio hasta que se deshacen. Se sirven templados.", "priceP": 4, "priceG": 8, "allergens": ["fish"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Ensaladilla Rusa", "ingredients": "", "description": "Cremosa y bien fría, como debe ser. Se acaba antes de lo que crees.", "priceP": 3.5, "priceG": 7, "allergens": ["eggs","fish"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Papas Saladas", "ingredients": "A elegir entre roquefort, alioli o brava", "description": "Patatas fritas al momento con la salsa que elijas por encima.", "priceP": 4, "priceG": 8, "allergens": ["milk","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Papas de la Casa", "ingredients": "Patatas, gambas y salsa de la casa", "description": "Nuestra tapa más pedida. La salsa no la contamos.", "priceP": 4.5, "priceG": 9, "allergens": ["crustaceans"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
     ]
   },
   {
     "category": "Del Mar",
     "dualPrice": true,
     "items": [
-      { "name": "Chipirones Plancha", "description": "", "priceP": 4.5, "priceG": 12, "allergens": ["molluscs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Sepia Plancha", "description": "", "priceP": null, "priceG": 12, "allergens": ["molluscs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Gallo de San Pedro Plancha", "description": "", "priceP": null, "priceG": 15, "allergens": ["fish"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Dorada Plancha", "description": "", "priceP": 6, "priceG": 12, "allergens": ["fish"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Chocos Fritos", "description": "", "priceP": null, "priceG": 12, "allergens": ["molluscs","gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Cazon en Adobo Frito", "description": "", "priceP": 4.5, "priceG": 12, "allergens": ["fish","gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Boquerones Fritos", "description": "", "priceP": null, "priceG": 11, "allergens": ["fish","gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Puntillitas", "description": "", "priceP": 4.5, "priceG": 9, "allergens": ["molluscs","gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Pavia de Merluza", "description": "", "priceP": 4.5, "priceG": 9, "allergens": ["fish","gluten","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Pescado Frito Variado", "description": "Chocos, cazón y boquerones (p/p)", "priceP": null, "priceG": 15, "allergens": ["fish","molluscs","gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
+      { "name": "Chipirones Plancha", "ingredients": "", "description": "A la plancha fuerte, con su ajo y perejil. Sencillo y directo.", "priceP": 4.5, "priceG": 12, "allergens": ["molluscs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Sepia Plancha", "ingredients": "", "description": "Tierna por dentro y dorada por fuera, con un chorreón de limón.", "priceP": null, "priceG": 12, "allergens": ["molluscs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Gallo de San Pedro Plancha", "ingredients": "", "description": "Pescado de roca, de carne firme y sabor limpio. Según lonja del día.", "priceP": null, "priceG": 15, "allergens": ["fish"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Dorada Plancha", "ingredients": "", "description": "Entera a la plancha, con la piel crujiente y la carne jugosa.", "priceP": 6, "priceG": 12, "allergens": ["fish"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Chocos Fritos", "ingredients": "", "description": "Rebozado fino y aceite limpio. Crujen al morder.", "priceP": null, "priceG": 12, "allergens": ["molluscs","gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Cazon en Adobo Frito", "ingredients": "", "description": "Macerado la víspera en su adobo de comino y orégano.", "priceP": 4.5, "priceG": 12, "allergens": ["fish","gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Boquerones Fritos", "ingredients": "", "description": "Enharinados y fritos al momento, para comer con las manos.", "priceP": null, "priceG": 11, "allergens": ["fish","gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Puntillitas", "ingredients": "", "description": "Diminutas y crujientes, de las que se comen de una en una sin parar.", "priceP": 4.5, "priceG": 9, "allergens": ["molluscs","gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Pavia de Merluza", "ingredients": "", "description": "Tiras de merluza en su rebozado dorado, jugosas por dentro.", "priceP": 4.5, "priceG": 9, "allergens": ["fish","gluten","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Pescado Frito Variado", "ingredients": "Chocos, cazón y boquerones (p/p)", "description": "Nuestra fritura para compartir: un poco de todo lo que mejor sale.", "priceP": null, "priceG": 15, "allergens": ["fish","molluscs","gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
     ]
   },
   {
     "category": "Platos y Raciones",
     "dualPrice": true,
     "items": [
-      { "name": "Filetitos de Presa Iberica", "description": "", "priceP": null, "priceG": 16, "allergens": [], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Lagarto Iberico", "description": "", "priceP": 7.5, "priceG": 15, "allergens": [], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Chuletitas de Cordero", "description": "", "priceP": null, "priceG": 19.5, "allergens": [], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Churrasco de Pollo o Cerdo", "description": "", "priceP": null, "priceG": 10, "allergens": [], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Carrillada en Salsa", "description": "", "priceP": 4.5, "priceG": 9, "allergens": ["gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Rabo de Toro", "description": "", "priceP": null, "priceG": 14, "allergens": ["gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Albóndigas en Salsa", "description": "", "priceP": 4.5, "priceG": 9, "allergens": ["gluten","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Revuelto Campero", "description": "", "priceP": null, "priceG": 10, "allergens": ["eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Platos Combinados", "description": "", "priceP": null, "priceG": 9, "allergens": ["eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Huevos con Patatas", "description": "", "priceP": null, "priceG": 7, "allergens": ["eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Super Combinado XXL", "description": "Cerdo, patatas, bacon, huevo, pimiento y chorizo", "priceP": null, "priceG": 12, "allergens": ["eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Solomillo", "description": "Salsa a elegir roquefort, pimienta o de la casa", "priceP": 4.5, "priceG": 9, "allergens": ["milk"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Huevos Glaseados", "description": "", "priceP": 4, "priceG": 8, "allergens": ["eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Flamenquines Caseros", "description": "Jamón york y queso", "priceP": 4.5, "priceG": 9, "allergens": ["gluten","milk","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Lengua en Salsa", "description": "", "priceP": 4.5, "priceG": 9, "allergens": ["gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
+      { "name": "Filetitos de Presa Iberica", "ingredients": "", "description": "Presa ibérica al punto que pidas, con su grasa infiltrada.", "priceP": null, "priceG": 16, "allergens": [], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Lagarto Iberico", "ingredients": "", "description": "Corte pequeño y sabroso del ibérico, a la plancha y con sal en escamas.", "priceP": 7.5, "priceG": 15, "allergens": [], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Chuletitas de Cordero", "ingredients": "", "description": "Al carbón, doradas por fuera y jugosas por dentro. Se comen con los dedos.", "priceP": null, "priceG": 19.5, "allergens": [], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Churrasco de Pollo o Cerdo", "ingredients": "", "description": "A la brasa, con su punto de ajo y perejil.", "priceP": null, "priceG": 10, "allergens": [], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Carrillada en Salsa", "ingredients": "", "description": "Guisada a fuego lento hasta que se corta con el tenedor.", "priceP": 4.5, "priceG": 9, "allergens": ["gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Rabo de Toro", "ingredients": "", "description": "Nuestro guiso más lento, de los que saben mejor al día siguiente.", "priceP": null, "priceG": 14, "allergens": ["gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Albóndigas en Salsa", "ingredients": "", "description": "Caseras, de las de toda la vida, con salsa para mojar pan.", "priceP": 4.5, "priceG": 9, "allergens": ["gluten","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Revuelto Campero", "ingredients": "", "description": "Cremoso, hecho a fuego bajo y removido sin prisa.", "priceP": null, "priceG": 10, "allergens": ["eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Platos Combinados", "ingredients": "", "description": "El clásico de barra. Pregunta por la combinación del día.", "priceP": null, "priceG": 9, "allergens": ["eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Huevos con Patatas", "ingredients": "", "description": "Huevos rotos sobre patatas fritas. Nada más y nada menos.", "priceP": null, "priceG": 7, "allergens": ["eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Super Combinado XXL", "ingredients": "Cerdo, patatas, bacon, huevo, pimiento y chorizo", "description": "Para el que llega con hambre de verdad. Avisado quedas.", "priceP": null, "priceG": 12, "allergens": ["eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Solomillo", "ingredients": "Salsa a elegir roquefort, pimienta o de la casa", "description": "A la plancha, en su punto, con la salsa que prefieras.", "priceP": 4.5, "priceG": 9, "allergens": ["milk"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Huevos Glaseados", "ingredients": "", "description": "Cuajados por fuera y con la yema líquida, para romper y mezclar.", "priceP": 4, "priceG": 8, "allergens": ["eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Flamenquines Caseros", "ingredients": "Jamón york y queso", "description": "Liados y empanados aquí mismo, fritos hasta quedar bien dorados.", "priceP": 4.5, "priceG": 9, "allergens": ["gluten","milk","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Lengua en Salsa", "ingredients": "", "description": "Guiso tradicional, tierna y con una salsa espesa de las de mojar.", "priceP": 4.5, "priceG": 9, "allergens": ["gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
     ]
   },
   {
     "category": "Baguettes",
     "dualPrice": true,
     "items": [
-      { "name": "Faberman", "description": "Pollo, tomate, jamón y alioli", "priceP": 4, "priceG": 5, "allergens": ["gluten","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Toreto", "description": "Pollo, jamón, salsa roquefort", "priceP": 4, "priceG": 5, "allergens": ["gluten","milk"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Baghetto", "description": "Pollo, jamón, salsa roquefort, lechuga", "priceP": 4, "priceG": 6, "allergens": ["gluten","milk"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Campera", "description": "Carne mechada, jamón y tomate", "priceP": 4, "priceG": 6, "allergens": ["gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Sabrosa", "description": "Panceta al horno y queso", "priceP": 4, "priceG": 5, "allergens": ["gluten","milk"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Gaditana", "description": "Palitos de cangrejo, salsa rosa, lechuga, pimiento piquillo, tomate y atún", "priceP": 4, "priceG": 5, "allergens": ["gluten","fish","crustaceans","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Empana", "description": "Filete de pollo empanado", "priceP": 4, "priceG": 5, "allergens": ["gluten","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Pio-Pio", "description": "Pollo, tomate y jamón", "priceP": 4, "priceG": 5, "allergens": ["gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
+      { "name": "Faberman", "ingredients": "Pollo, tomate, jamón y alioli", "description": "Nuestro más vendido desde el primer día.", "priceP": 4, "priceG": 5, "allergens": ["gluten","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Toreto", "ingredients": "Pollo, jamón, salsa roquefort", "description": "Para los que el roquefort nunca es suficiente.", "priceP": 4, "priceG": 5, "allergens": ["gluten","milk"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Baghetto", "ingredients": "Pollo, jamón, salsa roquefort, lechuga", "description": "El Toreto con un punto más fresco.", "priceP": 4, "priceG": 6, "allergens": ["gluten","milk"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Campera", "ingredients": "Carne mechada, jamón y tomate", "description": "Carne mechada hecha en casa, jugosa y de sabor intenso.", "priceP": 4, "priceG": 6, "allergens": ["gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Sabrosa", "ingredients": "Panceta al horno y queso", "description": "La panceta sale del horno y va directa al pan.", "priceP": 4, "priceG": 5, "allergens": ["gluten","milk"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Gaditana", "ingredients": "Palitos de cangrejo, salsa rosa, lechuga, pimiento piquillo, tomate y atún", "description": "Fresca y con mucho dentro. La del verano.", "priceP": 4, "priceG": 5, "allergens": ["gluten","fish","crustaceans","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Empana", "ingredients": "Filete de pollo empanado", "description": "Empanado fino y crujiente, recién salido de la sartén.", "priceP": 4, "priceG": 5, "allergens": ["gluten","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Pio-Pio", "ingredients": "Pollo, tomate y jamón", "description": "Sencilla y de las que nunca fallan.", "priceP": 4, "priceG": 5, "allergens": ["gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
     ]
   },
   {
     "category": "Sandwichs",
     "dualPrice": false,
     "items": [
-      { "name": "Mixto", "description": "York y queso", "priceP": 4, "priceG": null, "allergens": ["gluten","milk"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Vegetal", "description": "Lechuga, cebolla, tomate y atún", "priceP": 4.5, "priceG": null, "allergens": ["gluten","fish"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Club", "description": "Pollo, lechuga, huevo, bacon, york y queso", "priceP": 7, "priceG": null, "allergens": ["gluten","eggs","milk"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
+      { "name": "Mixto", "ingredients": "York y queso", "description": "El de siempre, bien tostado y con el queso fundido.", "priceP": 4, "priceG": null, "allergens": ["gluten","milk"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Vegetal", "ingredients": "Lechuga, cebolla, tomate y atún", "description": "Fresco y ligero, para cuando apetece poco lío.", "priceP": 4.5, "priceG": null, "allergens": ["gluten","fish"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Club", "ingredients": "Pollo, lechuga, huevo, bacon, york y queso", "description": "Tres pisos y a doble altura. Se sirve con patatas.", "priceP": 7, "priceG": null, "allergens": ["gluten","eggs","milk"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
     ]
   },
   {
     "category": "Hamburguesas",
     "dualPrice": false,
     "items": [
-      { "name": "Completa", "description": "Hamburguesa, bacon, queso, huevo, tomate y cebolla", "priceP": 6, "priceG": null, "allergens": ["gluten","milk","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Crunchy", "description": "Hamburguesa pollo crujiente, lechuga, tomate, queso y mayonesa", "priceP": 6.5, "priceG": null, "allergens": ["gluten","milk","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Ternera", "description": "Hamburguesa ternera, bacon, huevo, cebolla, tomate y queso", "priceP": 7, "priceG": null, "allergens": ["gluten","milk","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
+      { "name": "Completa", "ingredients": "Hamburguesa, bacon, queso, huevo, tomate y cebolla", "description": "Nuestra hamburguesa de referencia, con todo lo que tiene que llevar.", "priceP": 6, "priceG": null, "allergens": ["gluten","milk","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Crunchy", "ingredients": "Hamburguesa pollo crujiente, lechuga, tomate, queso y mayonesa", "description": "El pollo se reboza y se fríe al momento para que cruja de verdad.", "priceP": 6.5, "priceG": null, "allergens": ["gluten","milk","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Ternera", "ingredients": "Hamburguesa ternera, bacon, huevo, cebolla, tomate y queso", "description": "Ternera picada del día, hecha al punto que pidas.", "priceP": 7, "priceG": null, "allergens": ["gluten","milk","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
     ]
   },
   {
     "category": "Perritos",
     "dualPrice": false,
     "items": [
-      { "name": "King Kobra", "description": "Baguette, doble salchicha, salsa brava, bacon y tortilla", "priceP": 7, "priceG": null, "allergens": ["gluten","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Kiboca", "description": "Salchicha, queso, bacon y tortilla", "priceP": 5, "priceG": null, "allergens": ["gluten","milk","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
-      { "name": "Cachorro", "description": "Salchicha sola", "priceP": 3, "priceG": null, "allergens": ["gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
+      { "name": "King Kobra", "ingredients": "Baguette, doble salchicha, salsa brava, bacon y tortilla", "description": "Doble de todo. El que se pide cuando hay hambre en serio.", "priceP": 7, "priceG": null, "allergens": ["gluten","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Kiboca", "ingredients": "Salchicha, queso, bacon y tortilla", "description": "Con la tortilla recién hecha por encima. Suena raro y funciona.", "priceP": 5, "priceG": null, "allergens": ["gluten","milk","eggs"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" },
+      { "name": "Cachorro", "ingredients": "Salchicha sola", "description": "El básico, para los peques o para picar algo rápido.", "priceP": 3, "priceG": null, "allergens": ["gluten"], "image": "https://3dkcwgh1f6van6kw.public.blob.vercel-storage.com/dishes/placeholder-dish.png" }
     ]
   }
 ]

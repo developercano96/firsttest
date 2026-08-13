@@ -13,6 +13,7 @@ type Props = MenuItemData & {
 
 export default function MenuItem({
   name,
+  ingredients,
   description,
   priceP,
   priceG,
@@ -26,7 +27,9 @@ export default function MenuItem({
   return (
     <button
       type="button"
-      onClick={() => openDish({ name, description, priceP, priceG, allergens, image })}
+      onClick={() =>
+        openDish({ name, ingredients, description, priceP, priceG, allergens, image })
+      }
       className={`grid ${priceGridCols(dualPrice)} w-full px-4 py-3 items-center text-left hover:bg-[var(--primary)]/10 ${
         !isLast ? "border-b border-[var(--border)]" : ""
       }`}
@@ -37,9 +40,11 @@ export default function MenuItem({
           {name}
         </div>
 
-        {description && (
+        {/* En la fila solo van los ingredientes: la descripción se reserva para
+            el modal, para no alargar cada línea de la carta. */}
+        {ingredients && (
           <div className="text-sm text-[var(--muted)] mt-1 leading-snug">
-            {description}
+            {ingredients}
           </div>
         )}
 
