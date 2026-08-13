@@ -13,9 +13,12 @@ type Props = {
 // Margen extra al llevar el pill activo a la vista, para que se asome el
 // siguiente/anterior y quede claro que hay más categorías en esa dirección.
 const SCROLL_PADDING = 64;
-// Holgura sobre el alto real de la cabecera: la línea que decide qué categoría
-// está activa cae justo por debajo de ella.
-const TRIGGER_MARGIN = 6;
+// Aire entre la cabecera sticky y la sección a la que se salta, para que la
+// tarjeta no quede pegada al header.
+const ANCHOR_GAP = 16;
+// Epsilon sobre el punto de aterrizaje: sin él, una sección que cae justo en
+// la línea puede quedar dentro o fuera según el redondeo subpíxel.
+const TRIGGER_EPSILON = 2;
 // Tras pulsar un ancla, cuánto esperar sin eventos de scroll para considerar
 // que el scroll animado ha terminado y recalcular la categoría activa.
 const CLICK_SETTLE_DELAY = 150;
@@ -27,10 +30,12 @@ export default function CategoryNav({ categories, showAllergenLink }: Props) {
   const navRef = useRef<HTMLElement>(null);
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
   const [active, setActive] = useState(() => slugify(categories[0] ?? ""));
-  // Alto real de la cabecera. Se mide en vez de fijarlo porque depende del
-  // logo de cada cliente, y alimenta tanto el scrollspy como el
-  // scroll-margin-top de las secciones (--header-h).
-  const headerHeightRef = useRef(0);
+  // Dónde aterriza una sección al saltar a su ancla: alto real de la cabecera
+  // (se mide, porque depende del logo de cada cliente) más el aire. Un único
+  // valor alimenta el scroll-margin-top de las secciones (--anchor-offset) y
+  // la línea de disparo del scrollspy, para que la categoría que se marca
+  // activa sea exactamente la que queda bajo la cabecera.
+  const anchorOffsetRef = useRef(0);
 
   // Mientras el scroll lo provoca un clic en el nav, se ignoran las
   // categorías intermedias por las que se pasa de camino al destino.
@@ -38,11 +43,14 @@ export default function CategoryNav({ categories, showAllergenLink }: Props) {
   const settleTimerRef = useRef<number | undefined>(undefined);
   const updateRef = useRef<() => void>(() => {});
 
+  // Al soltar la supresión no se recalcula: el destino del clic ya quedó
+  // activo, y recalcular aquí es lo que permitía que el atajo de "final de
+  // página" pisara la categoría recién pulsada. El siguiente scroll manual
+  // vuelve a mandar.
   function scheduleRelease(delay: number) {
     if (settleTimerRef.current) window.clearTimeout(settleTimerRef.current);
     settleTimerRef.current = window.setTimeout(() => {
       suppressRef.current = false;
-      updateRef.current();
     }, delay);
   }
 
@@ -54,10 +62,10 @@ export default function CategoryNav({ categories, showAllergenLink }: Props) {
     if (!header) return;
 
     function measure() {
-      const height = header!.offsetHeight;
-      if (height === headerHeightRef.current) return;
-      headerHeightRef.current = height;
-      document.documentElement.style.setProperty("--header-h", `${height}px`);
+      const offset = header!.offsetHeight + ANCHOR_GAP;
+      if (offset === anchorOffsetRef.current) return;
+      anchorOffsetRef.current = offset;
+      document.documentElement.style.setProperty("--anchor-offset", `${offset}px`);
       updateRef.current();
     }
 
@@ -88,7 +96,7 @@ export default function CategoryNav({ categories, showAllergenLink }: Props) {
         return;
       }
 
-      const trigger = headerHeightRef.current + TRIGGER_MARGIN;
+      const trigger = anchorOffsetRef.current + TRIGGER_EPSILON;
       let currentId = sections[0].id;
       for (const section of sections) {
         if (section.getBoundingClientRect().top <= trigger) {
@@ -145,10 +153,17 @@ export default function CategoryNav({ categories, showAllergenLink }: Props) {
     }
   }, [active]);
 
-  function handleClick(slug: string) {
-    setActive(slug);
+  // Cualquier ancla del nav tiene que silenciar el scrollspy mientras dura el
+  // scroll animado, aunque no sea una categoría: si no, el spy va activando
+  // todas las que atraviesa y el nav se sacude en horizontal por el camino.
+  function suppressSpyDuringScroll() {
     suppressRef.current = true;
     scheduleRelease(CLICK_FALLBACK_DELAY);
+  }
+
+  function handleClick(slug: string) {
+    setActive(slug);
+    suppressSpyDuringScroll();
   }
 
   return (
@@ -187,6 +202,7 @@ export default function CategoryNav({ categories, showAllergenLink }: Props) {
       {showAllergenLink && (
         <a
           href={`#${ALLERGEN_LEGEND_ID}`}
+          onClick={suppressSpyDuringScroll}
           className="shrink-0 inline-flex items-center gap-1 rounded-full border border-[var(--accent)]/40 px-3 py-1 font-medium whitespace-nowrap"
         >
           <IoInformationCircleOutline size={18} />

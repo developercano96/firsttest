@@ -33,10 +33,11 @@
 html {
   scroll-behavior: smooth;
 
-  /* Alto de la cabecera sticky. CategoryNav lo mide y lo reescribe al montar,
-     porque cambia con el logo de cada cliente; este valor solo cubre el primer
-     pintado antes de que corra el JS. */
-  --header-h: 168px;
+  /* Dónde aterriza una sección al saltar a su ancla: alto de la cabecera
+     sticky más el aire para que la tarjeta no quede pegada. CategoryNav lo
+     mide y lo reescribe al montar, porque cambia con el logo de cada cliente;
+     este valor solo cubre el primer pintado antes de que corra el JS. */
+  --anchor-offset: 120px;
 }
 
 body {

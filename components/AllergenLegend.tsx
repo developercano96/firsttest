@@ -11,7 +11,7 @@ export default function AllergenLegend({ allergens }: Props) {
   return (
     <section
       id={ALLERGEN_LEGEND_ID}
-      className="scroll-mt-[var(--header-h)] bg-[var(--card)] border border-[var(--border)] rounded-xl shadow-sm overflow-hidden"
+      className="scroll-mt-[var(--anchor-offset)] bg-[var(--card)] border border-[var(--border)] rounded-xl shadow-sm overflow-hidden"
     >
       <div className="px-4 py-3 bg-[var(--primary)] text-[var(--accent)]">
         <h2 className="text-lg font-semibold">Alérgenos</h2>

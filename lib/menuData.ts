@@ -26,8 +26,25 @@ function isNullableNumber(value: unknown): value is number | null {
   return value === null || typeof value === "number";
 }
 
+// Para que el mensaje de error diga qué llegó, no solo qué se esperaba.
+function describe(value: unknown): string {
+  if (value === null) return "null";
+  if (Array.isArray(value)) return "un array";
+  return typeof value;
+}
+
+// Un null o un string sueltos en el JSON reventarían al leer propiedades, con
+// un TypeError que no dice dónde está el problema. Como cada carta se escribe
+// a mano por cliente, el error tiene que localizar la entrada.
+function isPlainObject(raw: unknown): raw is Record<string, unknown> {
+  return typeof raw === "object" && raw !== null && !Array.isArray(raw);
+}
+
 function parseItem(raw: unknown, path: string): MenuItemData {
-  const item = raw as Record<string, unknown>;
+  if (!isPlainObject(raw)) {
+    throw new Error(`${path}: cada plato debe ser un objeto, recibido ${describe(raw)}`);
+  }
+  const item = raw;
 
   if (typeof item.name !== "string" || !item.name) {
     throw new Error(`${path}: falta "name"`);
@@ -77,8 +94,12 @@ export function parseMenuData(raw: unknown): MenuCategoryData[] {
   }
 
   return raw.map((rawCategory, index) => {
-    const category = rawCategory as Record<string, unknown>;
     const path = `menu.json[${index}]`;
+
+    if (!isPlainObject(rawCategory)) {
+      throw new Error(`${path}: cada categoría debe ser un objeto, recibido ${describe(rawCategory)}`);
+    }
+    const category = rawCategory;
 
     if (typeof category.category !== "string" || !category.category) {
       throw new Error(`${path}: falta "category"`);

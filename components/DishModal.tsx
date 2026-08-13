@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { IoClose } from "react-icons/io5";
 import { GiKnifeFork } from "react-icons/gi";
@@ -14,13 +14,21 @@ type Props = {
 
 export default function DishModal({ item, onRequestClose }: Props) {
   const isOpen = item !== null;
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const imageSrc = item?.image ?? null;
 
-  // Cada plato arranca con su propia imagen por cargar, para que el spinner
-  // vuelva a aparecer al abrir otro y no herede el estado del anterior.
-  useEffect(() => {
-    setImageLoaded(false);
-  }, [item?.image]);
+  // Se guarda QUÉ imagen cargó, no un booleano que haya que resetear por
+  // efecto: next/image dispara onLoad desde un efecto de layout cuando la
+  // imagen ya está en caché, así que un reset en un efecto pasivo podía
+  // llegar después y dejar el spinner girando para siempre. Comparando el
+  // src no hay orden que valga: si coincide, esa imagen está lista.
+  const [loadedSrc, setLoadedSrc] = useState<string | null>(null);
+  const imageLoaded = imageSrc !== null && loadedSrc === imageSrc;
+
+  const dialogRef = useRef<HTMLDivElement>(null);
+  // Evita que dos cierres seguidos (Escape mantenido, doble toque en el fondo)
+  // consuman dos entradas de historial y saquen al usuario de la carta: el
+  // listener no se retira hasta que popstate provoca el re-render.
+  const closingRef = useRef(false);
 
   // Deja una entrada de historial al abrir, para que el botón/gesto "atrás"
   // de Android cierre el modal en vez de salir de la página. Cualquier vía
@@ -29,14 +37,25 @@ export default function DishModal({ item, onRequestClose }: Props) {
   useEffect(() => {
     if (!isOpen) return;
 
-    window.history.pushState({ dishModal: true }, "");
+    closingRef.current = false;
+
+    // Conserva el estado que hubiera (Next marca sus entradas con __NA). Tras
+    // navegar a un ancla del nav el estado es null, y sin propagarlo el
+    // "adelante" del navegador acababa recargando la página entera.
+    window.history.pushState({ ...window.history.state, dishModal: true }, "");
     document.body.style.overflow = "hidden";
+
+    // El foco vive fuera del diálogo (en la fila del plato que lo abrió), y
+    // aria-modal="true" le dice al lector de pantalla que ignore todo lo de
+    // fuera: sin moverlo, no habría forma de alcanzar ni el botón de cerrar.
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    dialogRef.current?.focus();
 
     function onPopState() {
       onRequestClose();
     }
     function onKeyDown(e: KeyboardEvent) {
-      if (e.key === "Escape") window.history.back();
+      if (e.key === "Escape") requestClose();
     }
 
     window.addEventListener("popstate", onPopState);
@@ -46,32 +65,37 @@ export default function DishModal({ item, onRequestClose }: Props) {
       document.body.style.overflow = "";
       window.removeEventListener("popstate", onPopState);
       window.removeEventListener("keydown", onKeyDown);
+      previouslyFocused?.focus();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
-  if (!item) return null;
-
-  function handleClose() {
+  function requestClose() {
+    if (closingRef.current) return;
+    closingRef.current = true;
     window.history.back();
   }
+
+  if (!item) return null;
 
   return (
     <div
       className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 sm:items-center sm:p-4"
-      onClick={handleClose}
+      onClick={requestClose}
     >
       <div
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-label={item.name}
-        className="max-h-[90vh] w-full overflow-y-auto rounded-t-2xl bg-[var(--card)] text-[var(--text)] sm:max-w-md sm:rounded-2xl"
+        tabIndex={-1}
+        className="max-h-[90vh] w-full overflow-y-auto rounded-t-2xl bg-[var(--card)] text-[var(--text)] outline-none sm:max-w-md sm:rounded-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* El tinte se queda en 10%: con una cabecera oscura, al 20% el fondo
             bajaba de 4.5:1 contra el texto "Foto no disponible". */}
         <div className="relative aspect-4/3 bg-[var(--primary)]/10">
-          {item.image ? (
+          {imageSrc ? (
             <>
               {!imageLoaded && (
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -84,15 +108,15 @@ export default function DishModal({ item, onRequestClose }: Props) {
               )}
 
               <Image
-                src={item.image}
+                src={imageSrc}
                 alt={item.name}
                 fill
                 className={`object-cover transition-opacity duration-300 ${
                   imageLoaded ? "opacity-100" : "opacity-0"
                 }`}
                 sizes="(max-width: 640px) 100vw, 480px"
-                onLoad={() => setImageLoaded(true)}
-                onError={() => setImageLoaded(true)}
+                onLoad={() => setLoadedSrc(imageSrc)}
+                onError={() => setLoadedSrc(imageSrc)}
               />
             </>
           ) : (
@@ -104,7 +128,7 @@ export default function DishModal({ item, onRequestClose }: Props) {
 
           <button
             type="button"
-            onClick={handleClose}
+            onClick={requestClose}
             aria-label="Cerrar"
             className="absolute top-3 right-3 flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-white"
           >

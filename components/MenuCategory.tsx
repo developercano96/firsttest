@@ -13,7 +13,7 @@ export default function MenuCategory({ category, items, dualPrice }: Props) {
   return (
     <div
       id={slugify(category)}
-      className="scroll-mt-[var(--header-h)] bg-[var(--card)] border border-[var(--border)] rounded-xl shadow-sm overflow-hidden"
+      className="scroll-mt-[var(--anchor-offset)] bg-[var(--card)] border border-[var(--border)] rounded-xl shadow-sm overflow-hidden"
     >
 
       {/* Header */}
