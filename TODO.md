@@ -5,8 +5,10 @@ Lista de mejoras identificadas en revisión de código (2026-08-12/13). Se van m
 ## Arquitectura
 
 - [x] **1. Menú como JSON estático compilado** — **descartado como problema**: es el modelo de negocio pretendido (SaaS donde el cambio de carta es un servicio de pago que gestionamos nosotros, no autogestión del restaurante). Pendiente sí queda pensar el flujo *interno* para generar el JSON de cada cliente nuevo a partir de su carta física, y la arquitectura multi-tenant para servir un JSON distinto por restaurante.
-- [ ] **2. Alérgenos inferidos a mano** (acordado como MVP) — antes de producción real, esos datos deberían venir confirmados por el restaurante, no adivinados por contexto.
-- [ ] **20. Descripciones de plato inventadas** — las 52 `description` de `data/menu.json` son texto de relleno escrito para la demo, no información real de ningún restaurante. Mismo tratamiento que la tarea 2: para un cliente real tienen que venir de él, o al menos pasar su validación. Sirven perfectamente para vender la app; no para servirlas a un comensal.
+> **Nota sobre las tareas 2 y 20.** No son trabajo pendiente en este repo: no se pueden cerrar aquí porque "Taste & Flavor" es un restaurante inventado y no hay nadie con quien confirmar los datos. Son **puertas del proceso de alta de cada cliente real**, y quedan abiertas a propósito como recordatorio. Revisado el 2026-08-13: se decide no construir nada alrededor todavía (ni bandera de datos verificados, ni checklist de alta) hasta que haya un cliente de verdad.
+
+- [ ] **2. Alérgenos inferidos a mano** (acordado como MVP) — antes de producción real, esos datos deberían venir confirmados por el restaurante, no adivinados por contexto. Es la más seria de las dos: la información de alérgenos en hostelería está regulada (Reglamento UE 1169/2011 y, en España, RD 126/2015 para producto no envasado) y la responsabilidad recae en el establecimiento. No admite "ya lo corregiremos". Único cortafuegos hoy: la frase de la leyenda de alérgenos.
+- [ ] **20. Descripciones de plato inventadas** — las 52 `description` de `data/menu.json` son texto de relleno escrito para la demo, no información real de ningún restaurante. Menos grave que la 2 (una promesa que el bar no ha hecho, no un riesgo para el comensal), pero para un cliente real tienen que venir de él. Sirven perfectamente para vender la app; no para servirlas a un comensal.
 - [ ] **3. Todo en un único árbol de Server Components sin code-splitting por categoría** — **diferido**: no es problema con 52 items; revisitar solo si algún cliente del SaaS tiene una carta mucho más grande (p. ej. 300+ referencias) donde el streaming/code-splitting por categoría empiece a aportar valor.
 
 ## Funcionalidad
@@ -32,7 +34,8 @@ Lista de mejoras identificadas en revisión de código (2026-08-12/13). Se van m
 
 ## Seguridad / dependencias
 
-- [ ] **15. Next.js 16.2.0 con avisos de seguridad** ya corregidos en 16.3.0 (XSS, SSRF, cache poisoning, DoS — 19 advisories según `npm audit`, mayoría severidad alta). Vale la pena actualizar antes de producción; es un cambio de versión menor, bajo riesgo.
+- [x] **15. Next.js 16.2.0 con avisos de seguridad** — **hecho**: subido a 16.3.0 (con `eslint-config-next` a juego, ambos pineados exactos). Arrastra `sharp` 0.34.5 → 0.35.3 (CVE de libvips) y `postcss` → 8.5.23 (XSS y path traversal). Las 4 vulnerabilidades restantes eran transitivas solo de desarrollo (babel, brace-expansion, js-yaml, picomatch) y se cerraron con `npm audit fix` sin `--force`. **`npm audit`: 0 vulnerabilidades.**
+  - Verificado tras el salto: typecheck, lint y build limpios, y 16 comprobaciones de humo sobre la app en marcha (logo, cabeceras de precio, leyenda de alérgenos, descripciones, imagen OG, favicons). Sin cambios de código necesarios.
 
 ## Branding de prueba (soporte para tarea 13 y 14)
 
